@@ -1,9 +1,15 @@
 #include <iostream>
 #include <vector>
-#include "Card.h"
+#include "CardDeck.h"
 
 int main()
 {
+    //Create new Card Deck
+    CardDeck cd;
 
+    std::cout << cd.toString();
 
+    cd.shuffle();
+
+    std::cout << cd.toString();
 }
