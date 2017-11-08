@@ -1,21 +1,23 @@
 //
-// Created by Kevin Dyes on 27.10.17.
+// Created by Kevin Dyes on 28.10.17.
 //
 
 #ifndef BLACKJACK_PLAYER_H
 #define BLACKJACK_PLAYER_H
 
+#include <vector>
+#include "Card.h"
 
-#include "Person.h"
-
-
-class Player : public Person
+class Player
 {
 public:
-    
-    virtual ~Player(){}
-    
-};
+    virtual ~Player() = default;
 
+    virtual std::vector<Card> getCards() = 0;
+    virtual void addCard(Card& c) = 0;
+    virtual int getPoints() = 0;
+    virtual void setPoints(int p) = 0;
+
+};
 
 #endif //BLACKJACK_PLAYER_H

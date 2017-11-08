@@ -15,15 +15,15 @@
 class Card
 {
 public:
-    Card(){}
-    Card(std::string rank, std::string colour) : rank(rank), colour(colour){}
-    virtual ~Card(){}
+    Card() = default;
+    Card(std::string& rank, std::string& colour) : rank(rank), colour(colour){}
+    virtual ~Card() = default;
 
     std::string toString();
-    int getValueOfCard();
+    std::string getRank();
+    std::string getColour();
 
 private:
-    static std::map<std::string, int> valueMap;
     std::string rank;
     std::string colour;
 };

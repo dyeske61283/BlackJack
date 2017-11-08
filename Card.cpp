@@ -13,3 +13,12 @@ std::string Card::toString()
 
     return s.str();
 }
+
+std::string Card::getColour() {
+    return this->colour;
+}
+
+std::string Card::getRank() {
+    return this->rank;
+}
+
