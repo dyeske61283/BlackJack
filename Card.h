@@ -7,19 +7,24 @@
 
 
 #include <string>
+#include <sstream>
+#include <iostream>
+#include <map>
+#include <list>
 
 class Card
 {
 public:
     Card(){}
+    Card(std::string rank, std::string colour) : rank(rank), colour(colour){}
     virtual ~Card(){}
 
     std::string toString();
+    int getValueOfCard();
+
 private:
-    int value;
-    std::string name;
-    int colour;
+    static std::map<std::string, int> valueMap;
+    std::string rank;
+    std::string colour;
 };
-
-
 #endif //BLACKJACK_CARD_H
